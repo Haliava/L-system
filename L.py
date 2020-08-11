@@ -45,7 +45,7 @@ class Example(QWidget):
         self.start_y.move(20, 100)
         self.start_y.textEdited.connect(self.set_y)
 
-        with open(FILE_PATH) as L:
+        with open('formulas/' + FILE_PATH) as L:
             data = L.readlines()
             self.setWindowTitle(data[0])
             self.angle = 2 * math.pi / int(data[1])
